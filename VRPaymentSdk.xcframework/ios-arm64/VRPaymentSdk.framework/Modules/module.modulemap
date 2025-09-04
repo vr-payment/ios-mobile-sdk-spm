@@ -1,0 +1,11 @@
+framework module VRPaymentSdk {
+  umbrella header "VRPaymentSdk.h"
+  export *
+
+  module * { export * }
+}
+
+module VRPaymentSdk.Swift {
+  header "VRPaymentSdk-Swift.h"
+  requires objc
+}

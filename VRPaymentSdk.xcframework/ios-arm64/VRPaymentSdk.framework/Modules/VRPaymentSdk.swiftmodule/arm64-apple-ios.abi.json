@@ -1,0 +1,2877 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "VRPaymentSdk",
+    "printedName": "VRPaymentSdk",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConsoleErrorHandler",
+        "printedName": "ConsoleErrorHandler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "MissingTokenValue",
+            "printedName": "MissingTokenValue",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.ConsoleErrorHandler.Type) -> VRPaymentSdk.ConsoleErrorHandler",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConsoleErrorHandler",
+                    "printedName": "VRPaymentSdk.ConsoleErrorHandler",
+                    "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.ConsoleErrorHandler.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConsoleErrorHandler",
+                        "printedName": "VRPaymentSdk.ConsoleErrorHandler",
+                        "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO17MissingTokenValueyA2CmF",
+            "mangledName": "$s12VRPaymentSdk19ConsoleErrorHandlerO17MissingTokenValueyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO16errorDescriptionSSSgvp",
+            "mangledName": "$s12VRPaymentSdk19ConsoleErrorHandlerO16errorDescriptionSSSgvp",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO16errorDescriptionSSSgvg",
+                "mangledName": "$s12VRPaymentSdk19ConsoleErrorHandlerO16errorDescriptionSSSgvg",
+                "moduleName": "VRPaymentSdk",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VRPaymentSdk.ConsoleErrorHandler?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConsoleErrorHandler",
+                    "printedName": "VRPaymentSdk.ConsoleErrorHandler",
+                    "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12VRPaymentSdk19ConsoleErrorHandlerO8rawValueACSgSS_tcfc",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO8rawValueSSvp",
+            "mangledName": "$s12VRPaymentSdk19ConsoleErrorHandlerO8rawValueSSvp",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO8rawValueSSvg",
+                "mangledName": "$s12VRPaymentSdk19ConsoleErrorHandlerO8rawValueSSvg",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VRPaymentSdk19ConsoleErrorHandlerO",
+        "mangledName": "$s12VRPaymentSdk19ConsoleErrorHandlerO",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VRPaymentResultObserver",
+        "printedName": "VRPaymentResultObserver",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "paymentResult",
+            "printedName": "paymentResult(paymentResultMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PaymentResult",
+                "printedName": "VRPaymentSdk.PaymentResult",
+                "usr": "s:12VRPaymentSdk13PaymentResultV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdk0A14ResultObserverP07paymentC00eC7MessageyAA07PaymentC0V_tF",
+            "mangledName": "$s12VRPaymentSdk0A14ResultObserverP07paymentC00eC7MessageyAA07PaymentC0V_tF",
+            "moduleName": "VRPaymentSdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : VRPaymentSdk.VRPaymentResultObserver>",
+            "sugared_genericSig": "<Self where Self : VRPaymentSdk.VRPaymentResultObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12VRPaymentSdk0A14ResultObserverP",
+        "mangledName": "$s12VRPaymentSdk0A14ResultObserverP",
+        "moduleName": "VRPaymentSdk",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ThemeEnum",
+        "printedName": "ThemeEnum",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "LIGHT",
+            "printedName": "LIGHT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.ThemeEnum.Type) -> VRPaymentSdk.ThemeEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ThemeEnum",
+                    "printedName": "VRPaymentSdk.ThemeEnum",
+                    "usr": "s:12VRPaymentSdk9ThemeEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.ThemeEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ThemeEnum",
+                        "printedName": "VRPaymentSdk.ThemeEnum",
+                        "usr": "s:12VRPaymentSdk9ThemeEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk9ThemeEnumO5LIGHTyA2CmF",
+            "mangledName": "$s12VRPaymentSdk9ThemeEnumO5LIGHTyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "DARK",
+            "printedName": "DARK",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.ThemeEnum.Type) -> VRPaymentSdk.ThemeEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ThemeEnum",
+                    "printedName": "VRPaymentSdk.ThemeEnum",
+                    "usr": "s:12VRPaymentSdk9ThemeEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.ThemeEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ThemeEnum",
+                        "printedName": "VRPaymentSdk.ThemeEnum",
+                        "usr": "s:12VRPaymentSdk9ThemeEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk9ThemeEnumO4DARKyA2CmF",
+            "mangledName": "$s12VRPaymentSdk9ThemeEnumO4DARKyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VRPaymentSdk.ThemeEnum?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ThemeEnum",
+                    "printedName": "VRPaymentSdk.ThemeEnum",
+                    "usr": "s:12VRPaymentSdk9ThemeEnumO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VRPaymentSdk9ThemeEnumO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12VRPaymentSdk9ThemeEnumO8rawValueACSgSS_tcfc",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdk9ThemeEnumO8rawValueSSvp",
+            "mangledName": "$s12VRPaymentSdk9ThemeEnumO8rawValueSSvp",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk9ThemeEnumO8rawValueSSvg",
+                "mangledName": "$s12VRPaymentSdk9ThemeEnumO8rawValueSSvg",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VRPaymentSdk9ThemeEnumO",
+        "mangledName": "$s12VRPaymentSdk9ThemeEnumO",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TwintSDK",
+        "printedName": "TwintSDK",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PaymentResultEnum",
+        "printedName": "PaymentResultEnum",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "CANCELED",
+            "printedName": "CANCELED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.PaymentResultEnum.Type) -> VRPaymentSdk.PaymentResultEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentResultEnum",
+                        "printedName": "VRPaymentSdk.PaymentResultEnum",
+                        "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk17PaymentResultEnumO8CANCELEDyA2CmF",
+            "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO8CANCELEDyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "FAILED",
+            "printedName": "FAILED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.PaymentResultEnum.Type) -> VRPaymentSdk.PaymentResultEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentResultEnum",
+                        "printedName": "VRPaymentSdk.PaymentResultEnum",
+                        "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk17PaymentResultEnumO6FAILEDyA2CmF",
+            "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO6FAILEDyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "COMPLETED",
+            "printedName": "COMPLETED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.PaymentResultEnum.Type) -> VRPaymentSdk.PaymentResultEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentResultEnum",
+                        "printedName": "VRPaymentSdk.PaymentResultEnum",
+                        "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk17PaymentResultEnumO9COMPLETEDyA2CmF",
+            "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO9COMPLETEDyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "TIMEOUT",
+            "printedName": "TIMEOUT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.PaymentResultEnum.Type) -> VRPaymentSdk.PaymentResultEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentResultEnum",
+                        "printedName": "VRPaymentSdk.PaymentResultEnum",
+                        "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk17PaymentResultEnumO7TIMEOUTyA2CmF",
+            "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO7TIMEOUTyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "PENDING",
+            "printedName": "PENDING",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.PaymentResultEnum.Type) -> VRPaymentSdk.PaymentResultEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PaymentResultEnum",
+                        "printedName": "VRPaymentSdk.PaymentResultEnum",
+                        "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk17PaymentResultEnumO7PENDINGyA2CmF",
+            "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO7PENDINGyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VRPaymentSdk.PaymentResultEnum?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VRPaymentSdk17PaymentResultEnumO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO8rawValueACSgSS_tcfc",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdk17PaymentResultEnumO8rawValueSSvp",
+            "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO8rawValueSSvp",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk17PaymentResultEnumO8rawValueSSvg",
+                "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO8rawValueSSvg",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VRPaymentSdk17PaymentResultEnumO",
+        "mangledName": "$s12VRPaymentSdk17PaymentResultEnumO",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PaymentResult",
+        "printedName": "PaymentResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PaymentResultEnum",
+                "printedName": "VRPaymentSdk.PaymentResultEnum",
+                "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvp",
+            "mangledName": "$s12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvp",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvg",
+                "mangledName": "$s12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvg",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PaymentResultEnum",
+                    "printedName": "VRPaymentSdk.PaymentResultEnum",
+                    "usr": "s:12VRPaymentSdk17PaymentResultEnumO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvs",
+                "mangledName": "$s12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvs",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvM",
+                "mangledName": "$s12VRPaymentSdk13PaymentResultV4codeAA0cD4EnumOvM",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdk13PaymentResultV7messageSSSgvp",
+            "mangledName": "$s12VRPaymentSdk13PaymentResultV7messageSSSgvp",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk13PaymentResultV7messageSSSgvg",
+                "mangledName": "$s12VRPaymentSdk13PaymentResultV7messageSSSgvg",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk13PaymentResultV7messageSSSgvs",
+                "mangledName": "$s12VRPaymentSdk13PaymentResultV7messageSSSgvs",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk13PaymentResultV7messageSSSgvM",
+                "mangledName": "$s12VRPaymentSdk13PaymentResultV7messageSSSgvM",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12VRPaymentSdk13PaymentResultV",
+        "mangledName": "$s12VRPaymentSdk13PaymentResultV",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PassKit",
+        "printedName": "PassKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PassKit",
+        "printedName": "PassKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "ThreeDS_SDK",
+        "printedName": "ThreeDS_SDK",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "PassKit",
+        "printedName": "PassKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ThreeDS_SDK",
+        "printedName": "ThreeDS_SDK",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "ThreeDS_SDK",
+        "printedName": "ThreeDS_SDK",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VRPaymentSdk",
+        "printedName": "VRPaymentSdk",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "SDK_VERSION",
+            "printedName": "SDK_VERSION",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdkAAC11SDK_VERSIONSSvpZ",
+            "mangledName": "$s12VRPaymentSdkAAC11SDK_VERSIONSSvpZ",
+            "moduleName": "VRPaymentSdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdkAAC11SDK_VERSIONSSvgZ",
+                "mangledName": "$s12VRPaymentSdkAAC11SDK_VERSIONSSvgZ",
+                "moduleName": "VRPaymentSdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "onHandleOpenURL",
+            "printedName": "onHandleOpenURL(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC15onHandleOpenURL3urlSb10Foundation0F0V_tFZ",
+            "mangledName": "$s12VRPaymentSdkAAC15onHandleOpenURL3urlSb10Foundation0F0V_tFZ",
+            "moduleName": "VRPaymentSdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(eventObserver:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VRPaymentSdk",
+                "printedName": "VRPaymentSdk.VRPaymentSdk",
+                "usr": "s:12VRPaymentSdkAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VRPaymentResultObserver",
+                "printedName": "any VRPaymentSdk.VRPaymentResultObserver",
+                "usr": "s:12VRPaymentSdk0A14ResultObserverP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VRPaymentSdkAAC13eventObserverAbA0a6ResultD0_p_tcfc",
+            "mangledName": "$s12VRPaymentSdkAAC13eventObserverAbA0a6ResultD0_p_tcfc",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "launchPayment",
+            "printedName": "launchPayment(token:paymentMethodConfigurationId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC13launchPayment5token28paymentMethodConfigurationIdySS_SiSgtF",
+            "mangledName": "$s12VRPaymentSdkAAC13launchPayment5token28paymentMethodConfigurationIdySS_SiSgtF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "configureApplePay",
+            "printedName": "configureApplePay(merchantId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC17configureApplePay10merchantIdySS_tF",
+            "mangledName": "$s12VRPaymentSdkAAC17configureApplePay10merchantIdySS_tF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "configureDeepLink",
+            "printedName": "configureDeepLink(deepLink:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC17configureDeepLink04deepE0ySS_tF",
+            "mangledName": "$s12VRPaymentSdkAAC17configureDeepLink04deepE0ySS_tF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "configureBaseUrl",
+            "printedName": "configureBaseUrl(baseUrl:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC16configureBaseUrl04baseE0ySSSg_tF",
+            "mangledName": "$s12VRPaymentSdkAAC16configureBaseUrl04baseE0ySSSg_tF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "launchPayment",
+            "printedName": "launchPayment(token:isSwiftUI:paymentMethodConfigurationId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC13launchPayment5token9isSwiftUI28paymentMethodConfigurationIdySS_SbSiSgtF",
+            "mangledName": "$s12VRPaymentSdkAAC13launchPayment5token9isSwiftUI28paymentMethodConfigurationIdySS_SbSiSgtF",
+            "moduleName": "VRPaymentSdk",
+            "intro_iOS": "13.0",
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC5closeyyF",
+            "mangledName": "$s12VRPaymentSdkAAC5closeyyF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLightTheme",
+            "printedName": "setLightTheme(light:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSMutableDictionary",
+                "printedName": "Foundation.NSMutableDictionary",
+                "usr": "c:objc(cs)NSMutableDictionary"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC13setLightTheme5lightySo19NSMutableDictionaryC_tF",
+            "mangledName": "$s12VRPaymentSdkAAC13setLightTheme5lightySo19NSMutableDictionaryC_tF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAnimation",
+            "printedName": "setAnimation(type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AnimationEnum",
+                "printedName": "VRPaymentSdk.AnimationEnum",
+                "usr": "s:12VRPaymentSdk13AnimationEnumO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC12setAnimation4typeyAA0D4EnumO_tF",
+            "mangledName": "$s12VRPaymentSdkAAC12setAnimation4typeyAA0D4EnumO_tF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setDarkTheme",
+            "printedName": "setDarkTheme(dark:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSMutableDictionary",
+                "printedName": "Foundation.NSMutableDictionary",
+                "usr": "c:objc(cs)NSMutableDictionary"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC12setDarkTheme4darkySo19NSMutableDictionaryC_tF",
+            "mangledName": "$s12VRPaymentSdkAAC12setDarkTheme4darkySo19NSMutableDictionaryC_tF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCustomTheme",
+            "printedName": "setCustomTheme(custom:baseTheme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSMutableDictionary?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSMutableDictionary",
+                    "printedName": "Foundation.NSMutableDictionary",
+                    "usr": "c:objc(cs)NSMutableDictionary"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ThemeEnum",
+                "printedName": "VRPaymentSdk.ThemeEnum",
+                "usr": "s:12VRPaymentSdk9ThemeEnumO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VRPaymentSdkAAC14setCustomTheme6custom04baseE0ySo19NSMutableDictionaryCSg_AA0E4EnumOtF",
+            "mangledName": "$s12VRPaymentSdkAAC14setCustomTheme6custom04baseE0ySo19NSMutableDictionaryCSg_AA0E4EnumOtF",
+            "moduleName": "VRPaymentSdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12VRPaymentSdkAAC",
+        "mangledName": "$s12VRPaymentSdkAAC",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "Import",
+        "name": "ThreeDS_SDK",
+        "printedName": "ThreeDS_SDK",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "React",
+        "printedName": "React",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VRPaymentSdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnimationEnum",
+        "printedName": "AnimationEnum",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "BUBBLE",
+            "printedName": "BUBBLE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.AnimationEnum.Type) -> VRPaymentSdk.AnimationEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationEnum",
+                    "printedName": "VRPaymentSdk.AnimationEnum",
+                    "usr": "s:12VRPaymentSdk13AnimationEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.AnimationEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationEnum",
+                        "printedName": "VRPaymentSdk.AnimationEnum",
+                        "usr": "s:12VRPaymentSdk13AnimationEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk13AnimationEnumO6BUBBLEyA2CmF",
+            "mangledName": "$s12VRPaymentSdk13AnimationEnumO6BUBBLEyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "SLIDE",
+            "printedName": "SLIDE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.AnimationEnum.Type) -> VRPaymentSdk.AnimationEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationEnum",
+                    "printedName": "VRPaymentSdk.AnimationEnum",
+                    "usr": "s:12VRPaymentSdk13AnimationEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.AnimationEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationEnum",
+                        "printedName": "VRPaymentSdk.AnimationEnum",
+                        "usr": "s:12VRPaymentSdk13AnimationEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk13AnimationEnumO5SLIDEyA2CmF",
+            "mangledName": "$s12VRPaymentSdk13AnimationEnumO5SLIDEyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Var",
+            "name": "NONE",
+            "printedName": "NONE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VRPaymentSdk.AnimationEnum.Type) -> VRPaymentSdk.AnimationEnum",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationEnum",
+                    "printedName": "VRPaymentSdk.AnimationEnum",
+                    "usr": "s:12VRPaymentSdk13AnimationEnumO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VRPaymentSdk.AnimationEnum.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationEnum",
+                        "printedName": "VRPaymentSdk.AnimationEnum",
+                        "usr": "s:12VRPaymentSdk13AnimationEnumO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VRPaymentSdk13AnimationEnumO4NONEyA2CmF",
+            "mangledName": "$s12VRPaymentSdk13AnimationEnumO4NONEyA2CmF",
+            "moduleName": "VRPaymentSdk"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VRPaymentSdk.AnimationEnum?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationEnum",
+                    "printedName": "VRPaymentSdk.AnimationEnum",
+                    "usr": "s:12VRPaymentSdk13AnimationEnumO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VRPaymentSdk13AnimationEnumO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12VRPaymentSdk13AnimationEnumO8rawValueACSgSS_tcfc",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VRPaymentSdk13AnimationEnumO8rawValueSSvp",
+            "mangledName": "$s12VRPaymentSdk13AnimationEnumO8rawValueSSvp",
+            "moduleName": "VRPaymentSdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VRPaymentSdk13AnimationEnumO8rawValueSSvg",
+                "mangledName": "$s12VRPaymentSdk13AnimationEnumO8rawValueSSvg",
+                "moduleName": "VRPaymentSdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VRPaymentSdk13AnimationEnumO",
+        "mangledName": "$s12VRPaymentSdk13AnimationEnumO",
+        "moduleName": "VRPaymentSdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/RNScreenController.swift",
+      "kind": "StringLiteral",
+      "offset": 158,
+      "length": 46,
+      "value": "\"vrpayment-payment-sdk-close-app-notification\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/RNScreenController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 232,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/RNScreenController.swift",
+      "kind": "StringLiteral",
+      "offset": 308,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/RNScreenController.swift",
+      "kind": "Dictionary",
+      "offset": 358,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Helpers\/ConsoleErrorHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 106,
+      "length": 25,
+      "value": "\"Token can not be empty!\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Enums\/ThemeEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 69,
+      "length": 7,
+      "value": "\"light\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Enums\/ThemeEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 93,
+      "length": 6,
+      "value": "\"dark\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 261,
+      "length": 15,
+      "value": "\"twint-payment\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "IntegerLiteral",
+      "offset": 490,
+      "length": 2,
+      "value": "39"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 537,
+      "length": 14,
+      "value": "\"twint_result\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 593,
+      "length": 27,
+      "value": "\"TWINT_EVENT_LISTENER_NAME\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 687,
+      "length": 14,
+      "value": "\"TW_B_SUCCESS\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 723,
+      "length": 12,
+      "value": "\"TW_B_ERROR\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 765,
+      "length": 24,
+      "value": "\"TW_B_APP_NOT_INSTALLED\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 818,
+      "length": 26,
+      "value": "\"TW_T_CODE_FORMAT_INVALID\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/Twint\/TwintModule.swift",
+      "kind": "StringLiteral",
+      "offset": 879,
+      "length": 27,
+      "value": "\"TW_IOS_SCHEMA_URL_INVALID\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/PaymentResult.swift",
+      "kind": "StringLiteral",
+      "offset": 164,
+      "length": 10,
+      "value": "\"CANCELED\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/PaymentResult.swift",
+      "kind": "StringLiteral",
+      "offset": 193,
+      "length": 8,
+      "value": "\"FAILED\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/PaymentResult.swift",
+      "kind": "StringLiteral",
+      "offset": 223,
+      "length": 11,
+      "value": "\"COMPLETED\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/PaymentResult.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 9,
+      "value": "\"TIMEOUT\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/PaymentResult.swift",
+      "kind": "StringLiteral",
+      "offset": 283,
+      "length": 9,
+      "value": "\"PENDING\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/LoggerWrapper.swift",
+      "kind": "StringLiteral",
+      "offset": 278,
+      "length": 9,
+      "value": "\"threeDS\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ApplePay.swift",
+      "kind": "StringLiteral",
+      "offset": 287,
+      "length": 16,
+      "value": "\"applePayResult\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ApplePay.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 30,
+      "value": "\"APPLEPAY_EVENT_LISTENER_NAME\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 139,
+      "length": 3,
+      "value": "\"Y\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 172,
+      "length": 3,
+      "value": "\"N\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 204,
+      "length": 3,
+      "value": "\"U\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 3,
+      "value": "\"A\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 271,
+      "length": 3,
+      "value": "\"C\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 309,
+      "length": 3,
+      "value": "\"R\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 3,
+      "value": "\"D\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ChallengeStatusHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 389,
+      "length": 3,
+      "value": "\"I\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalPresentationController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 301,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 347,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 594,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 600,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalPresentationController.swift",
+      "kind": "FloatLiteral",
+      "offset": 2162,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4730,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4736,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ModalTransitioningDelegate.swift",
+      "kind": "BooleanLiteral",
+      "offset": 252,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ResizeScreen\/ResizeScreenModule.swift",
+      "kind": "StringLiteral",
+      "offset": 335,
+      "length": 36,
+      "value": "\"payment-sdk-resize-screen_observer\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 263,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "FloatLiteral",
+      "offset": 307,
+      "length": 3,
+      "value": "0.3"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "FloatLiteral",
+      "offset": 365,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "FloatLiteral",
+      "offset": 371,
+      "length": 3,
+      "value": "0.4"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 434,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "FloatLiteral",
+      "offset": 438,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 490,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "FloatLiteral",
+      "offset": 494,
+      "length": 3,
+      "value": "0.6"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 549,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "FloatLiteral",
+      "offset": 553,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "FloatLiteral",
+      "offset": 599,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 660,
+      "length": 25,
+      "value": "\"wallee.com.VRPaymentSdk\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 736,
+      "length": 10,
+      "value": "\"RNScreen\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 813,
+      "length": 11,
+      "value": "\"rn-screen\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 319,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/VRPaymentSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 237,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/VRPaymentSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 258,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/VRPaymentSdk.swift",
+      "kind": "StringLiteral",
+      "offset": 297,
+      "length": 7,
+      "value": "\"1.5.0\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Helpers\/Theme.swift",
+      "kind": "BooleanLiteral",
+      "offset": 428,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 335,
+      "length": 17,
+      "value": "\"THREEDS_SUCCESS\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 374,
+      "length": 15,
+      "value": "\"THREEDS_ERROR\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 415,
+      "length": 19,
+      "value": "\"THREEDS_CANCELLED\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 458,
+      "length": 17,
+      "value": "\"THREEDS_TIMEOUT\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 506,
+      "length": 24,
+      "value": "\"THREEDS_PROTOCOL_ERROR\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 560,
+      "length": 23,
+      "value": "\"THREEDS_RUNTIME_ERROR\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 615,
+      "length": 25,
+      "value": "\"THREEDS_INIT_SUCCESSFUL\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 688,
+      "length": 16,
+      "value": "\"threeds_result\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 748,
+      "length": 29,
+      "value": "\"THREEDS_EVENT_LISTENER_NAME\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "StringLiteral",
+      "offset": 824,
+      "length": 23,
+      "value": "\"THREEDS_ERROR_MESSAGE\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Modules\/ThreeDSModule.swift",
+      "kind": "BooleanLiteral",
+      "offset": 926,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Enums\/AnimationEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 74,
+      "length": 8,
+      "value": "\"bubble\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Enums\/AnimationEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 100,
+      "length": 7,
+      "value": "\"slide\""
+    },
+    {
+      "filePath": "\/Users\/gitlabrunner\/builds\/VwLiCsV2_\/0\/frontend\/mobile-sdk-android\/VRPayment\/VRPaymentSdk\/Enums\/AnimationEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 124,
+      "length": 6,
+      "value": "\"none\""
+    }
+  ]
+}
