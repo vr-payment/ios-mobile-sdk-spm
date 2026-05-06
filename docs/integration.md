@@ -1,7 +1,7 @@
 # Integration
 
 - [Integration](#integration)
-  - [Set up VR Payment](#set-up-vrpaymentsdk)
+  - [Set up VR Payment](#set-up-vr-payment)
   - [Create transaction](#create-transaction)
   - [Collect payment details](#collect-payment-details)
     - [Basic usage Swift (Storyboard)](#basic-usage-swift-storyboard)
@@ -119,13 +119,13 @@ The response object contains these properties:
 
 - `code` describing the result's type.
 
-| Code | Description |
-| --- | --- |
-| `COMPLETED` | The payment was successful. |
-| `FAILED` | The payment failed. Check the `message` for more information. |
-| `CANCELED` | The customer canceled the payment. |
-| `PENDING` | The customer has aborted the payment process, so the payment is in a temporarily pending state. It will eventually reach a final status (successful or failed), but it may take a while. Wait for a webhook notification and use the VR Payment API to retrieve the status of the transaction and inform the customer that the payment is pending. |
-| `TIMEOUT` | Token for this transaction expired. App will be closed and third-party app will get this message. For opening payment sdk third party app have to refetch token |
+| Code        | Description                                                                                                                                                                                                                                                                                                                                        |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `COMPLETED` | The payment was successful.                                                                                                                                                                                                                                                                                                                        |
+| `FAILED`    | The payment failed. Check the `message` for more information.                                                                                                                                                                                                                                                                                      |
+| `CANCELED`  | The customer canceled the payment.                                                                                                                                                                                                                                                                                                                 |
+| `PENDING`   | The customer has aborted the payment process, so the payment is in a temporarily pending state. It will eventually reach a final status (successful or failed), but it may take a while. Wait for a webhook notification and use the VR Payment API to retrieve the status of the transaction and inform the customer that the payment is pending. |
+| `TIMEOUT`   | Token for this transaction expired. App will be closed and third-party app will get this message. For opening payment sdk third party app have to refetch token                                                                                                                                                                                    |
 
 - `message` providing a localized error message that can be shown to the customer.
 
@@ -200,8 +200,8 @@ func foo(){
    </array>
   </dict>
  </array>
- <key>LSApplicationQueriesSchemes</key>
- <array>
+<key>LSApplicationQueriesSchemes</key>
+<array>
     <string>twint-issuer1</string>
     <string>twint-issuer2</string>
     <string>twint-issuer3</string>
@@ -230,6 +230,7 @@ func foo(){
     <string>twint-issuer26</string>
     <string>twint-issuer27</string>
     <string>twint-issuer28</string>
+    <string>twint-issuer29</string>
     <string>twint-issuer30</string>
     <string>twint-issuer31</string>
     <string>twint-issuer32</string>
@@ -240,8 +241,18 @@ func foo(){
     <string>twint-issuer37</string>
     <string>twint-issuer38</string>
     <string>twint-issuer39</string>
-    <string>twint-extended</string>
- </array>
+    <string>twint-issuer40</string>
+    <string>twint-issuer41</string>
+    <string>twint-issuer42</string>
+    <string>twint-issuer43</string>
+    <string>twint-issuer44</string>
+    <string>twint-issuer45</string>
+    <string>twint-issuer46</string>
+    <string>twint-issuer47</string>
+    <string>twint-issuer48</string>
+    <string>twint-issuer49</string>
+    <string>twint-issuer50</string>
+</array>
 
 
 
