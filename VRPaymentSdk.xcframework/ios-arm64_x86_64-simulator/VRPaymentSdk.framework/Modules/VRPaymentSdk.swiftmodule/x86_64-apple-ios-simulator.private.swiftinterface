@@ -1,43 +1,59 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios12.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VRPaymentSdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
-import AVFoundation
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target x86_64-apple-ios18.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name VRPaymentSdk
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
 import Combine
 import Foundation
-import OSLog
 import PassKit
+import ReactBrownfield
 import Swift
 import SwiftUI
+import ThreeDS_SDK
 import TwintSDK
 import UIKit
 @_exported import VRPaymentSdk
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public enum ConsoleErrorHandler : Swift.String, Foundation.LocalizedError {
-  case MissingTokenValue
-  public var errorDescription: Swift.String? {
-    get
-  }
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
+@_inheritsConvenienceInitializers @objc(GlobalEventSenderModule) public class GlobalEventSenderModule : ObjectiveC.NSObject {
+  @objc public static let EVENT_SWIFT_TO_OBJC_LISTENER_NAME: Swift.String
+  @objc public static let BODY_PROP: Swift.String
+  @objc public static let EVENT_PROP: Swift.String
+  @objc public static func getConstants() -> [Swift.String : Any]
+  @objc public static func supportedEvents() -> [Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
 }
-public protocol VRPaymentResultObserver : AnyObject {
-  func paymentResult(paymentResultMessage: PaymentResult)
-}
-public enum ThemeEnum : Swift.String {
-  case LIGHT
-  case DARK
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(TwintModule) public class TwintModule : ObjectiveC.NSObject {
+  @objc(shared) public static let shared: VRPaymentSdk.TwintModule
+  public static let TWINT_DATA_KEY: Swift.String
+  public static let TWINT_EVENT_NAME: Swift.String
+  public enum TwintResult : Swift.String {
+    case SUCCESS
+    case ERROR
+    case NOT_INSTALLED
+    case CODE_INVALID
+    case IOS_SCHEMA_INVALID
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
+  public static func onHandleError(errorCode: Swift.Int) -> Swift.String
+  public static func onHandleTwintOpenUrl(url: Foundation.URL) -> Swift.Bool
+  @objc(constantsToExport) public func constantsToExport() -> [Swift.AnyHashable : Any]
+  @objc(payWithCode:) public func payWithCode(_ paymentCode: Foundation.NSString)
+  @objc(registerForUOF:) public func registerForUOF(_ paymentCode: Foundation.NSString)
+  @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class CloseAppModalModule : ObjectiveC.NSObject {
+  @objc public static let shared: VRPaymentSdk.CloseAppModalModule
+  @objc public func closeIosApp()
+  @objc deinit
+}
+public typealias PromiseResolve = (Any?) -> Swift.Void
+public typealias PromiseReject = (Swift.String?, Swift.String?, (any Swift.Error)?) -> Swift.Void
 public enum PaymentResultEnum : Swift.String {
   case CANCELED
   case FAILED
@@ -51,24 +67,41 @@ public enum PaymentResultEnum : Swift.String {
   }
 }
 public struct PaymentResult {
-  public var code: PaymentResultEnum
+  public var code: VRPaymentSdk.PaymentResultEnum
   public var message: Swift.String?
 }
-public class VRPaymentSdk {
+@_hasMissingDesignatedInitializers public class PaymentSdk {
+  public static let shared: VRPaymentSdk.PaymentSdk
   public static let SDK_VERSION: Swift.String
+  public static let SDK_BUILD_VERSION: Swift.String
+  public static let SDK_DEPENDENCIES_VERSION: Swift.String
   public static func onHandleOpenURL(url: Foundation.URL) -> Swift.Bool
-  public init(eventObserver: any VRPaymentResultObserver)
+  public func initialize()
+  public func resultObserver(eventObserver: any VRPaymentSdk.PaymentResultObserver)
   public func launchPayment(token: Swift.String, paymentMethodConfigurationId: Swift.Int? = nil)
+  @available(iOS 13.0, *)
+  public func launchPayment(token: Swift.String, isSwiftUI: Swift.Bool, paymentMethodConfigurationId: Swift.Int? = nil)
   public func configureApplePay(merchantId: Swift.String)
   public func configureDeepLink(deepLink: Swift.String)
   public func configureBaseUrl(baseUrl: Swift.String?)
-  @available(iOS 13.0, *)
-  public func launchPayment(token: Swift.String, isSwiftUI: Swift.Bool, paymentMethodConfigurationId: Swift.Int? = nil)
   public func close()
   public func setLightTheme(light: Foundation.NSMutableDictionary)
-  public func setAnimation(type: AnimationEnum)
+  public func setAnimation(type: VRPaymentSdk.AnimationEnum)
   public func setDarkTheme(dark: Foundation.NSMutableDictionary)
-  public func setCustomTheme(custom: Foundation.NSMutableDictionary?, baseTheme: ThemeEnum)
+  public func setCustomTheme(custom: Foundation.NSMutableDictionary?, baseTheme: VRPaymentSdk.ThemeEnum)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class ResizeScreenModule : ObjectiveC.NSObject {
+  @objc public static var RESIZE_SCREEN_OBSERVER: Swift.String
+  @objc public static let shared: VRPaymentSdk.ResizeScreenModule
+  @objc public func resize(_ isOriginSize: Swift.Bool)
+  @objc public func resizeDynamically(_ size: Foundation.NSNumber)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class ApplePayButton : UIKit.UIView {
+  @objc @_Concurrency.MainActor @preconcurrency public var onPressCallback: (() -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 public enum AnimationEnum : Swift.String {
@@ -81,15 +114,69 @@ public enum AnimationEnum : Swift.String {
     get
   }
 }
-extension ConsoleErrorHandler : Swift.Equatable {}
-extension ConsoleErrorHandler : Swift.Hashable {}
-extension ConsoleErrorHandler : Swift.RawRepresentable {}
-extension ThemeEnum : Swift.Equatable {}
-extension ThemeEnum : Swift.Hashable {}
-extension ThemeEnum : Swift.RawRepresentable {}
-extension PaymentResultEnum : Swift.Equatable {}
-extension PaymentResultEnum : Swift.Hashable {}
-extension PaymentResultEnum : Swift.RawRepresentable {}
-extension AnimationEnum : Swift.Equatable {}
-extension AnimationEnum : Swift.Hashable {}
-extension AnimationEnum : Swift.RawRepresentable {}
+public enum ThemeEnum : Swift.String {
+  case LIGHT
+  case DARK
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ThreeDSModule) public class ThreeDSModule : ObjectiveC.NSObject {
+  @objc(shared) public static let shared: VRPaymentSdk.ThreeDSModule
+  public enum ThreeDSResult : Swift.String {
+    case SUCCESS
+    case ERROR
+    case CANCELLED
+    case TIMEOUT
+    case PROTOCOL_ERROR
+    case RUNTIME_ERROR
+    case INIT_SUCCESSFUL
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static let THREEDS_DATA_KEY: Swift.String
+  public static let THREEDS_EVENT_NAME: Swift.String
+  public static let THREEDS_ERROR_MESSAGE: Swift.String
+  @objc(constantsToExport) public func constantsToExport() -> [Swift.AnyHashable : Any]
+  @objc public func start3DS(_ data: Foundation.NSDictionary, resolve: @escaping VRPaymentSdk.PromiseResolve, rejecter reject: @escaping VRPaymentSdk.PromiseReject)
+  @objc public func createTransaction(_ resolve: @escaping VRPaymentSdk.PromiseResolve, rejecter reject: @escaping VRPaymentSdk.PromiseReject)
+  @objc public func startChallenge(_ data: Foundation.NSDictionary)
+  @objc deinit
+}
+public protocol PaymentResultObserver : AnyObject {
+  func paymentResult(paymentResultMessage: VRPaymentSdk.PaymentResult)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class SendEventModule : ObjectiveC.NSObject {
+  @objc public static let shared: VRPaymentSdk.SendEventModule
+  @objc public func sendPaymentResultToApp(message: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(ApplePayModule) public class ApplePayModule : ObjectiveC.NSObject {
+  public static let APPLEPAY_DATA_KEY: Swift.String
+  public static let APPLEPAY_EVENT_NAME: Swift.String
+  @objc(shared) public static let shared: VRPaymentSdk.ApplePayModule
+  @objc public func constantsToExport() -> [Swift.AnyHashable : Any]
+  @objc public func initialisePayment(_ data: Foundation.NSDictionary, resolve: @escaping VRPaymentSdk.PromiseResolve, rejecter reject: @escaping VRPaymentSdk.PromiseReject)
+  @objc public func getApplePayStatus(_ data: Foundation.NSDictionary, resolve: @escaping VRPaymentSdk.PromiseResolve, rejecter reject: @escaping VRPaymentSdk.PromiseReject)
+  @objc deinit
+}
+extension VRPaymentSdk.TwintModule.TwintResult : Swift.Equatable {}
+extension VRPaymentSdk.TwintModule.TwintResult : Swift.Hashable {}
+extension VRPaymentSdk.TwintModule.TwintResult : Swift.RawRepresentable {}
+extension VRPaymentSdk.PaymentResultEnum : Swift.Equatable {}
+extension VRPaymentSdk.PaymentResultEnum : Swift.Hashable {}
+extension VRPaymentSdk.PaymentResultEnum : Swift.RawRepresentable {}
+extension VRPaymentSdk.AnimationEnum : Swift.Equatable {}
+extension VRPaymentSdk.AnimationEnum : Swift.Hashable {}
+extension VRPaymentSdk.AnimationEnum : Swift.RawRepresentable {}
+extension VRPaymentSdk.ThemeEnum : Swift.Equatable {}
+extension VRPaymentSdk.ThemeEnum : Swift.Hashable {}
+extension VRPaymentSdk.ThemeEnum : Swift.RawRepresentable {}
+extension VRPaymentSdk.ThreeDSModule.ThreeDSResult : Swift.Equatable {}
+extension VRPaymentSdk.ThreeDSModule.ThreeDSResult : Swift.Hashable {}
+extension VRPaymentSdk.ThreeDSModule.ThreeDSResult : Swift.RawRepresentable {}

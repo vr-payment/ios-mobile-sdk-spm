@@ -21,9 +21,9 @@ import UIKit
 import VRPaymentSdk
 
 
-class ViewController : UIViewController, VRPaymentResultObserver {
+class ViewController : UIViewController, PaymentResultObserver {
 
-    let paymentSdk = VRPaymentSdk (eventObserver: self)
+    private let paymentSdk = PaymentSdk.shared
 
     @IBAction func openSdkClick()
     {
@@ -56,11 +56,13 @@ paymentSdk.setCustomTheme(custom: getNewCustomTheme(), baseTheme: .LIGHT)
 
 ### Colors
 
-![Payment method list](../imgs/theme-1.jpeg) ![Payment method details](../imgs/theme-2.jpeg) ![Pyament method additional details](../imgs/theme-3.jpeg)
+![Payment method list](./imgs/theme-1.jpeg) ![Payment method details](./imgs/theme-2.jpeg) ![Pyament method additional details](./imgs/theme-3.jpeg)
 
 ### Animation
 
-Use `setAnimation` method to change the screen change animation. Currently avaliable options are: `AnimationEnum.SLIDE` and `AnimationEnum.BUBBLE`. Default value is `AnimationEnum.SLIDE`. `VRPaymentSdk.instance?.setAnimation(AnimationEnum.BUBBLE)` allows to modify the payment dialog's dark theme. ![Slide Animation](../imgs/slideAnimation.gif) ![Bubble Animation](../imgs/bubbleAnimation.gif)
+Use `setAnimation` method to change the screen change animation. Currently avaliable options are: `AnimationEnum.SLIDE` and `AnimationEnum.BUBBLE`. Default value is `AnimationEnum.SLIDE`. `PaymentSdk.shared.setAnimation(AnimationEnum.BUBBLE)` allows to modify the payment dialog's dark theme.
+
+![Slide Animation](./imgs/slideAnimation.gif) ![Bubble Animation](./imgs/bubbleAnimation.gif)
 
 ### Default themes
 

@@ -2,42 +2,46 @@
 
 - [Table of contents](#table-of-contents)
   - [Requirements](#requirements)
+  - [SPM Contains](#spm-contains)
   - [How to Add the Package to Your Xcode Project](#how-to-add-the-package-to-your-xcode-project)
   - [Documentation](#documentation)
 
 ## Requirements
 
-This SDK has been compiled using Apple Swift version 6.0.3 (swiftlang-6.0.3.1.10 clang-1600.0.30.1). This compiler ensures optimal support for applications targeting iOS 13.0 and later, and provides full compatibility for code written in Swift 6.x.
+The `VRPaymentSdk` Swift Package requires Xcode 16.2 or later (Swift 6.0.3+), Swift Package Manager 5.9+, and targets iOS 12.4 or later. Since the package includes precompiled binary frameworks (.xcframework), using an older Xcode or incompatible Swift compiler version may result in build or runtime compatibility issues.
 
-If the following errors occur when using the SDK:
+## SPM Contains
 
-Incompatibility with other Swift versions (e.g., Swift 5.x)
+The Swift Package includes the following precompiled binary frameworks:
 
-Issues with binary files when using Xcode versions lower than those supported by Swift 6
+- **VRPaymentSdk** – core SDK functionality
+- **ReactBrownfield** – React Native brownfield integration layer
+- **ThreeDS_SDK** – 3-D Secure authentication support
+- **TwintSDK** – TWINT payment method integration
+- **hermes** – Hermes JavaScript engine runtime used by the React Native layer
 
-we recommend switching to CocoaPods for proper SDK integration, where a stable version compatible with newer Swift versions or Xcode will be used. You can find Cocoapod version here [Cocoapod repository](https://github.com/vr-payment/ios-mobile-sdk)
+All modules are distributed as `.xcframework` binaries and are automatically resolved by Swift Package Manager during integration.
 
 ## How to Add the Package to Your Xcode Project
 
 1. Open your project in **Xcode**.
 2. Go to the menu bar and select **File** → **Add Package Dependencies...**
 3. In the dialog that appears, you can choose between two options:
-
    - **Option 1**: Let Xcode fetch the package directly from the repository.
      - Enter the repository URL in the search field:  
        `https://github.com/vr-payment/ios-mobile-sdk-spm`
    - **Option 2**: Clone the repository manually and add it as a **local package**.
 
-   ![Add SPM](./imgs/ios-spm-1.png)
+   ![Add SPM](./docs/imgs/ios-spm-1.png)
 
 4. After selecting the package, click **Add Package**.  
-   ![Select SPM](./imgs/ios-spm-2.png)
+   ![Select SPM](./docs/imgs/ios-spm-2.png)
 
 5. Choose the appropriate target for the package and press **Add Package**.  
-   ![Target SPM](./imgs/ios-spm-3.png)
+   ![Target SPM](./docs/imgs/ios-spm-3.png)
 
 6. The new package will now be added to your project.  
-   ![Target SPM](./imgs/ios-spm-4.png)
+   ![Target SPM](./docs/imgs/ios-spm-4.png)
 
 ## Documentation
 

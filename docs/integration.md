@@ -1,26 +1,33 @@
 # Integration
 
 - [Integration](#integration)
-  - [Set up VR Payment](#set-up-vrpaymentsdk)
+  - [Set up](#set-up)
   - [Create transaction](#create-transaction)
   - [Collect payment details](#collect-payment-details)
     - [Basic usage Swift (Storyboard)](#basic-usage-swift-storyboard)
     - [Basic usage SwiftUI](#basic-usage-swiftui)
   - [Handle result](#handle-result)
-    - [Additional integration steps](#additional-integration-steps)
+    - [Result codes](#result-codes)
+  - [Additional integration steps](#additional-integration-steps)
+    - [Handle deep links](#handle-deep-links)
+    - [Configure deep link](#configure-deep-link)
   - [Verify payment](#verify-payment)
 
-## Set up VR Payment
+## Set up
 
-To use the iOS Payment SDK, you need a [VR Payment account](https://gateway.vr-payment.de/user/signup). After signing up, set up your space and enable the payment methods you would like to support.
+To use the iOS Payment SDK, you need a [account](https://gateway.vr-payment.de/user/signup). After signing up, set up your space and enable the payment methods you would like to support.
 
 ## Create transaction
 
-For security reasons, your app cannot create transactions and fetch access tokens. This has to be done on your server by talking to the [VR Payment Web Service API](https://gateway.vr-payment.de/en-us/doc/api/web-service). You can use one of the official SDK libraries to make these calls.
+For security reasons, your app cannot create transactions or fetch access tokens directly. This must be done on your server using the [Web Service API](https://gateway.vr-payment.de/en-us/doc/api/web-service). You can use one of the official SDK libraries to make these calls.
 
-To use the iOS Payment SDK to collect payments, an endpoint needs to be added on your server that creates a transaction by calling the [create transaction](https://gateway.vr-payment.de/doc/api/web-service#transaction-service--create) API endpoint. A transaction holds information about the customer and the line items and tracks charge attempts and the payment state.
+To collect payments with the iOS Payment SDK, create a backend endpoint that:
 
-Once the transaction has been created, your endpoint can fetch an access token by calling the [create transaction credentials](https://gateway.vr-payment.de/doc/api/web-service#transaction-service--create-transaction-credentials) API endpoint. The access token is returned and passed to the iOS Payment SDK.
+1. Creates a transaction
+2. Fetches transaction credentials (access token)
+3. Returns the token to your iOS app
+
+A transaction contains customer information, purchased items, and tracks payment attempts and state changes.
 
 ```bash
 # Create a transaction
@@ -28,165 +35,208 @@ curl 'https://gateway.vr-payment.de/api/transaction/create?spaceId=1' \
   -X "POST" \
   -d "{{TRANSACTION_DATA}}"
 
-# Fetch an access token for the created transaction
+# Fetch an access token
 curl 'https://gateway.vr-payment.de/api/transaction/createTransactionCredentials?spaceId={{SPACE_ID}}&id={{TRANSACTION_ID}}' \
   -X 'POST'
 ```
+
+The returned access token is then passed to the Payment SDK.
 
 ## Collect payment details
 
 ### Basic usage Swift (Storyboard)
 
-Before launching the iOS Payment SDK to collect the payment, your checkout page should show the total amount, the products that are being purchased and a checkout button to start the payment process.
+Before launching the Payment SDK, your checkout page should display:
 
-Let your checkout activity extend `VRPaymentResultObserver`, add the necessary function `paymentResult`.
+- purchased products
+- total amount
+- checkout button
+
+Implement `PaymentResultObserver` to receive payment updates:
 
 ```swift
 import UIKit
 import VRPaymentSdk
 
-class ViewController : UIViewController, VRPaymentResultObserver {
+class ViewController: UIViewController, PaymentResultObserver {
 
-    func paymentResult(paymentResultMessage: PaymentResult)
-    {
-        ....
+    private let paymentSdk = PaymentSdk.shared
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        paymentSdk.initialize()
+        paymentSdk.resultObserver(eventObserver: self)
+        paymentSdk.configureApplePay(merchantId: "merchant.your.id")
+        paymentSdk.configureDeepLink(deepLink: "uniq-payment-deep-link")
+    }
+
+    func paymentResult(paymentResultMessage: PaymentResult) {
+        // Handle payment result
+    }
+
+    @IBAction func openSdkClick() {
+        // Fetch token from backend
+        paymentSdk.launchPayment(token: token)
     }
 }
 ```
 
-When the customer taps the checkout button, call your endpoint that creates the transaction and returns the access token, initialize the `VRPaymentSdk` instance and launch the payment dialog.
+Once the payment is completed, the SDK closes automatically and calls `paymentResult(...)`.
 
-```swift
-// ...
-import UIKit
-import VRPaymentSdk
-
-class ViewController : UIViewController, VRPaymentResultObserver {
-
-    //...
-    var paymentSdk: VRPaymentSdk
-
-    @IBAction func openSdkClick()
-    {
-        paymentSdk = VRPaymentSdk(eventObserver: self)
-        ...
-        paymentSdk.launchPayment(token: _token)
-    }
-
-    // ...
-}
-```
-
-After the customer completes the payment, the dialog dismisses and the `paymentResult` method is called.
+---
 
 ### Basic usage SwiftUI
 
-First of all make sure you import the `VRPaymentSdk` package and initialize it in relevant class. You also need to extend the class with `VRPaymentResultObserver` to able to receive the result of payment:
+For SwiftUI integration, initialize the SDK in a manager class and register the result observer:
 
 ```swift
-// PaymentManager.swift
 import VRPaymentSdk
-...
-class PaymentManager: VRPaymentResultObserver {
-...
-func onOpenSdkPress(){
-    let sdk = VRPaymentSdk(eventObserver: self)
-    ...
+
+class PaymentManager: PaymentResultObserver {
+
+    private let paymentSdk = PaymentSdk.shared
+
+    init() {
+        paymentSdk.initialize()
+        paymentSdk.resultObserver(eventObserver: self)
+        paymentSdk.configureApplePay(merchantId: "merchant.your.id")
+        paymentSdk.configureDeepLink(deepLink: "uniq-payment-deep-link")
+    }
+
+    func paymentResult(paymentResultMessage: PaymentResult) {
+        // Handle payment result
+    }
+
+    func openPayment(token: String) {
+        paymentSdk.launchPayment(
+            token: token,
+            isSwiftUI: true
+        )
     }
 }
 ```
 
-To display the UI of Payment SDK make sure you import the `VRPaymentSdk` into the relevant View:
+Use it inside your SwiftUI view:
 
 ```swift
-// ContentView.swift
-import VRPaymentSdk
-...
-    Button {
-       // add code for generating transaction and fetching the token
-       isModalPresented = true
-    } label: {
-        Text("Checkout")
-    }
-    .presentModalView(isPresented: isModalPresented, token: token)
-```
+import SwiftUI
 
-Use presentModalView custom modifier for the UI part, passing two arguments: `isPresented` (modal presented state) and `token`.
+struct ContentView: View {
+
+    private let paymentManager = PaymentManager()
+
+    var body: some View {
+        Button("Checkout") {
+            // Fetch token from backend first
+            paymentManager.openPayment(token: token)
+        }
+    }
+}
+```
 
 ## Handle result
 
-The response object contains these properties:
+The SDK returns a `PaymentResult` object containing:
 
-- `code` describing the result's type.
+- `code` → payment state
+- `message` → localized message for the customer
 
-| Code | Description |
-| --- | --- |
-| `COMPLETED` | The payment was successful. |
-| `FAILED` | The payment failed. Check the `message` for more information. |
-| `CANCELED` | The customer canceled the payment. |
-| `PENDING` | The customer has aborted the payment process, so the payment is in a temporarily pending state. It will eventually reach a final status (successful or failed), but it may take a while. Wait for a webhook notification and use the VR Payment API to retrieve the status of the transaction and inform the customer that the payment is pending. |
-| `TIMEOUT` | Token for this transaction expired. App will be closed and third-party app will get this message. For opening payment sdk third party app have to refetch token |
+### Result codes
 
-- `message` providing a localized error message that can be shown to the customer.
+| Code        | Description                                                                       |
+| ----------- | --------------------------------------------------------------------------------- |
+| `COMPLETED` | Payment completed successfully.                                                   |
+| `FAILED`    | Payment failed. Check `message` for details.                                      |
+| `CANCELED`  | Customer canceled the payment.                                                    |
+| `PENDING`   | Payment is temporarily pending. Wait for webhook confirmation and verify via API. |
+| `TIMEOUT`   | Transaction token expired. A new token must be fetched before reopening the SDK.  |
+
+Example:
 
 ```swift
 import UIKit
 import VRPaymentSdk
 
-class ViewController: UIViewController, VRPaymentResultObserver {
-    // ...
+class ViewController: UIViewController, PaymentResultObserver {
 
     @IBOutlet var resultCallbackText: UILabel?
 
     func paymentResult(paymentResultMessage: PaymentResult) {
-        var colorCodeMap = [PaymentResultEnum.FAILED: UIColor.red, PaymentResultEnum.COMPLETED: UIColor.green, PaymentResultEnum.CANCELED: UIColor.orange]
+        let colorCodeMap = [
+            PaymentResultEnum.FAILED: UIColor.red,
+            PaymentResultEnum.COMPLETED: UIColor.green,
+            PaymentResultEnum.CANCELED: UIColor.orange
+        ]
 
         DispatchQueue.main.async {
             self.resultCallbackText?.text = paymentResultMessage.code.rawValue
-            self.resultCallbackText?.textColor = colorCodeMap[paymentResultMessage.code];
+            self.resultCallbackText?.textColor = colorCodeMap[paymentResultMessage.code]
         }
     }
-
-    // ...
 }
 ```
 
-### Additional integration steps
+## Additional integration steps
 
-`VRPaymentSdk.onHandleOpenURL(url: url)` Static function for handling deep link. It has to be called in [SceneDelegate](https://developer.apple.com/documentation/uikit/uiscenedelegate/3238059-scene) or [AppDelegate](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623112-application?language=objc). Without this implementation SDK isn't able to send current response when transaction is complete.
+### Handle deep links
+
+For payment methods such as TWINT, your app must forward incoming URLs back to the SDK.
+
+Call:
 
 ```swift
+PaymentSdk.onHandleOpenURL(url: url)
+```
 
+inside your `SceneDelegate` or `AppDelegate`:
 
+```swift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-...
-
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        if let url = URLContexts.first?.url{
-          VRPaymentSdk.onHandleOpenURL(url: url)
+        if let url = URLContexts.first?.url {
+            PaymentSdk.onHandleOpenURL(url: url)
         }
     }
-...
-
 }
-
 ```
 
-For Twint integration you have to setup `URL types` and `Queried URL Schemes` in your app `Info.plist` and pass deep link into SDK
+Without this integration, the SDK may not receive the final payment result after returning from third-party payment apps.
 
-```javascript
+---
 
-func foo(){
-    let sdk = VRPaymentSdk(eventObserver: self)
-    ...
-    sdk.configureDeepLink(deepLink: "uniq-payment-deep-link")
-    ...
-}
+### Configure deep link
 
+Configure deep linking inside the SDK:
+
+```swift
+let paymentSdk = PaymentSdk.shared
+
+paymentSdk.initialize()
+paymentSdk.resultObserver(eventObserver: self)
+paymentSdk.configureDeepLink(deepLink: "uniq-payment-deep-link")
 ```
 
-<mark style="background-color: red"> :bangbang: :warning: Please note that this is essential to invoke TWINT. :warning: :bangbang: </mark>
+The same value must also be configured in your `Info.plist`:
+
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>uniq-payment-deep-link</string>
+    </array>
+  </dict>
+</array>
+```
+
+⚠️ **This step is required for TWINT integration.**
+
+You also need to configure `LSApplicationQueriesSchemes` for TWINT issuer apps:
 
 ```xml
  <key>CFBundleURLTypes</key>
@@ -200,8 +250,8 @@ func foo(){
    </array>
   </dict>
  </array>
- <key>LSApplicationQueriesSchemes</key>
- <array>
+<key>LSApplicationQueriesSchemes</key>
+<array>
     <string>twint-issuer1</string>
     <string>twint-issuer2</string>
     <string>twint-issuer3</string>
@@ -230,6 +280,7 @@ func foo(){
     <string>twint-issuer26</string>
     <string>twint-issuer27</string>
     <string>twint-issuer28</string>
+    <string>twint-issuer29</string>
     <string>twint-issuer30</string>
     <string>twint-issuer31</string>
     <string>twint-issuer32</string>
@@ -240,13 +291,40 @@ func foo(){
     <string>twint-issuer37</string>
     <string>twint-issuer38</string>
     <string>twint-issuer39</string>
-    <string>twint-extended</string>
- </array>
-
-
+    <string>twint-issuer40</string>
+    <string>twint-issuer41</string>
+    <string>twint-issuer42</string>
+    <string>twint-issuer43</string>
+    <string>twint-issuer44</string>
+    <string>twint-issuer45</string>
+    <string>twint-issuer46</string>
+    <string>twint-issuer47</string>
+    <string>twint-issuer48</string>
+    <string>twint-issuer49</string>
+    <string>twint-issuer50</string>
+</array>
 
 ```
 
 ## Verify payment
 
-As customers could quit the app or lose network connection before the result is handled or malicious clients could manipulate the response, it is strongly recommended to set up your server to listen for webhook events the get transactions' actual states. Find more information in the [webhook documentation](https://gateway.vr-payment.de/en-us/doc/webhooks).
+Customers may:
+
+- close the app
+- lose internet connection
+- interrupt payment flow
+- manipulate client responses
+
+Because of that, **you should always verify payment state on your backend**.
+
+The recommended approach is:
+
+1. Listen for webhook events
+2. Retrieve transaction state via API
+3. Update your backend order state accordingly
+
+More information can be found in the [webhook documentation](https://gateway.vr-payment.de/en-us/doc/webhooks).
+
+```
+
+```

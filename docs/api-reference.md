@@ -1,17 +1,20 @@
-# API reference
+# API Reference
 
 | API | Type | Description |
 | --- | --- | --- |
-| VRPaymentResultObserver | protocol | Protocol for handling post-payment events `paymentResult` |
-| `func paymentResult(paymentResultMessage: PaymentResult)` | function | Result handler for transaction state |
-| `func launchPayment(token: String, paymentMethodConfigurationIdValue: Int? = nil)` | function | Opening payment dialog (activity),paymentMethodConfigurationId is numeric name of payment method or can be nil |
-| `func launchPayment(token: String, isSwiftUI: Bool, paymentMethodConfigurationIdValue: Int? = nil)` | function | Opening payment dialog (activity), paymentMethodConfigurationId is numeric name of payment method or can be nil in **SwiftUI** |
-| `func launchPayment(token: String, rootController: UIViewController)` | function | **Abandoned from v1.2.2.** Opening payment dialog (activity). |
-| `func onHandleOpenURL(url: URL)` | function | this function is for handling deep link. It has to be called in [SceneDelegate](https://developer.apple.com/documentation/uikit/uiscenedelegate/3238059-scene) or [AppDelegate](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623112-application?language=objc). Without this implementation SDK isn't able to send current response when transaction is complete. Returning `true` when all is set up correctly |
-| `func setDarkTheme(dark: NSMutableDictionary)` | function | Can override the whole dark theme or just some specific color. |
-| `func setLightTheme(light: NSMutableDictionary)` | function | Can override the whole light theme or just some specific color. |
-| `func setCustomTheme(custom: NSMutableDictionary/nill, baseTheme: ThemeEnum)` | function | Force to use only this theme (independent on user's setup). Can override default light/dark theme and force to use it or completely replace all or specific colors (DARK/LIGHT) |
-| `func presentModalView(isPresented: Binding<Bool>, token: Binding<String>)` | extension | **Abandoned from v1.2.2.** SwiftUI View modifier to present the UI part of the Payment SDK. |
-| `func setAnimation(type: AnimationEnum)` | function | Defining type of animation for moving between the pages |
-| `func configureApplePay(merchantId: String)` | function | Configuring ApplePay Merchant ID which is going to be used to process payments (requires additional portal configuration, see [Apple Pay integration](./apple-pay.md)) |
-| `func configureDeepLink(deepLink: String)` | function | Implementing deep linking functionality within payment applications to seamlessly redirect users back to the customer app upon completion of transactions. |
+| `PaymentSdk.shared` | singleton | Shared instance of the SDK used for configuration and launching payments. |
+| `PaymentSdk.SDK_VERSION` | property | Current SDK version string. |
+| `protocol PaymentResultObserver` | protocol | Protocol for handling post-payment events (`paymentResult`). |
+| `func paymentResult(paymentResultMessage: PaymentResult)` | function | Callback invoked when transaction state changes or payment is completed. |
+| `func initialize()` | function | Initializes the SDK runtime and prepares the React Native environment. Must be called before launching payment. |
+| `func resultObserver(eventObserver: PaymentResultObserver)` | function | Registers a result observer. Must be configured before launching payment. |
+| `func launchPayment(token: String, paymentMethodConfigurationId: Int? = nil)` | function | Opens the payment flow using UIKit. `paymentMethodConfigurationId` is optional and can be used to preselect a payment method. |
+| `func launchPayment(token: String, isSwiftUI: Bool, paymentMethodConfigurationId: Int? = nil)` | function | Opens the payment flow in SwiftUI applications. Available on **iOS 13.0+**. |
+| `static func onHandleOpenURL(url: URL) -> Bool` | function | Handles incoming deep links / callbacks (for example TWINT). Must be called in `SceneDelegate` or `AppDelegate` URL handling methods. Returns `true` if handled by SDK. |
+| `func configureApplePay(merchantId: String)` | function | Configures Apple Pay Merchant ID used for Apple Pay transactions. Additional portal configuration may be required. |
+| `func configureDeepLink(deepLink: String)` | function | Configures application deep link used to return users back to the host app after payment completion. |
+| `func setLightTheme(light: NSMutableDictionary)` | function | Overrides or extends the default light theme colors. |
+| `func setDarkTheme(dark: NSMutableDictionary)` | function | Overrides or extends the default dark theme colors. |
+| `func setCustomTheme(custom: NSMutableDictionary?, baseTheme: ThemeEnum)` | function | Forces a custom theme regardless of system appearance. Can override all or selected colors based on a base theme. |
+| `func setAnimation(type: AnimationEnum)` | function | Sets transition animation style used inside the payment flow. |
+| `func close()` | function | Removes registered observers and performs SDK cleanup. |
