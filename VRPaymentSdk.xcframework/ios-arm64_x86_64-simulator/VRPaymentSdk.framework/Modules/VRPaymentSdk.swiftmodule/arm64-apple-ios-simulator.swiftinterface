@@ -87,6 +87,7 @@ public struct PaymentResult {
   public func close()
   public func setLightTheme(light: Foundation.NSMutableDictionary)
   public func setAnimation(type: VRPaymentSdk.AnimationEnum)
+  public func setPendingTimeout(sec: Swift.Int)
   public func setDarkTheme(dark: Foundation.NSMutableDictionary)
   public func setCustomTheme(custom: Foundation.NSMutableDictionary?, baseTheme: VRPaymentSdk.ThemeEnum)
   @objc deinit
