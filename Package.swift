@@ -3,12 +3,16 @@ import PackageDescription
 
 let package = Package(
     name: "VRPaymentSdk",
-    platforms: [.iOS("12.4")],
+    platforms: [.iOS("15.1")],
     products: [
+        .library(
+            name: "VRPaymentSdk",
+            targets: ["VRPaymentSdk", "ReactBrownfield", "ThreeDS_SDK", "TwintSDK", "hermes"]
+        ),
+        // kept for backward compatibility
         .library(name: "ReactBrownfield", targets: ["ReactBrownfield"]),
         .library(name: "ThreeDS_SDK", targets: ["ThreeDS_SDK"]),
         .library(name: "TwintSDK", targets: ["TwintSDK"]),
-        .library(name: "VRPaymentSdk", targets: ["VRPaymentSdk"]),
         .library(name: "hermes", targets: ["hermes"])
     ],
     targets: [
